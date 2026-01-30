@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRANDA | Dev Edition</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="minimal-glass">
+
+    <div id="loader">
+        <div class="loader-terminal">
+            <div id="terminal-cursor">> <span id="typing-boot"></span><span class="cursor">_</span></div>
+            <button class="unlock-btn" id="exec-btn" onclick="initPortal()" style="display:none">Execute
+                Program</button>
+        </div>
+    </div>
+
+    <!-- Immersive Video Engine -->
+    <div class="bg-engine">
+        <video id="v-bg" loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="v-overlay"></div>
+    </div>
+
+    <!-- Minimalist Floating Portal -->
+    <main class="portal-root" id="portal">
+
+        <!-- Top Center identity -->
+        <header class="identity-pod">
+            <div class="avatar-sphere">
+                <img src="avatar.png" alt="Pranda">
+            </div>
+            <div class="brand-text">
+                <h1 class="brand-h1">PR<span>AN</span>DA</h1>
+                <p class="brand-tag">BABA PARASI DEĞİL, LUA TERİ 🚀</p>
+            </div>
+        </header>
+
+        <!-- Floating Info Metrics -->
+        <div class="metrics-row">
+
+            <div class="glass-card meta-box">
+                <div class="m-label">SYSTEM_INFO</div>
+                <div class="m-content">
+                    <p style="color:var(--dim)">local status = <span style="color:#58A6FF">"coding"</span></p>
+                    <p style="color:var(--dim)">local quality = <span style="color:#7EE787">100</span></p>
+                </div>
+                <div class="social-strip">
+                    <a href="https://www.instagram.com/mehmetrda59/" target="_blank" class="social-link"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.gg/PuwUCMMqtd" target="_blank" class="social-link" title="Discord"><i
+                            class="fab fa-discord"></i></a>
+                    <div class="dev-badge-minimal" title="Certified Developer">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card humor-console">
+                <div class="m-label">TERMINAL_OUTPUT</div>
+                <div class="m-content">
+                    <div class="typing-text" id="dev-humor">Connecting to sanity.server...</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Minimal Bottom Bar -->
+        <footer class="foot-bar">
+            <div class="foot-stat">
+                <span class="m-label">SYS.CLOCK:</span> <span id="local-time">00:00:00</span>
+            </div>
+            <div class="foot-stat">
+                <span class="m-label">TOPLAM GÖRÜNTÜLENME:</span> <span id="v-count">0</span>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
